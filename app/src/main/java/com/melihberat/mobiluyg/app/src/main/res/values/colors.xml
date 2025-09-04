@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_main">#F9F9FB</color>
+    <color name="text_primary">#555879</color>
+    <color name="text_secondary">#98A1BC</color>
+    <color name="btn_primary">#A69BFF</color>
+    <color name="btn_secondary">#9C92FF</color>
+    <color name="nav_tint_single">#555879</color>
+</resources>
