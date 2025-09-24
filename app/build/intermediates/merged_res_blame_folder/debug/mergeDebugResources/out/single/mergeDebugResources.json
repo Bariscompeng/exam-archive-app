@@ -1,0 +1,266 @@
+[
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_img_cs_thumb.jpeg.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/img_cs_thumb.jpeg"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/xml_data_extraction_rules.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_item_feedback_card.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/item_feedback_card.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_users.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_users.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_activity_favorites.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_favorites.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_check_24.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_check_24.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_activity_exam.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_exam.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_activity_question.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_question.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_content_add_category.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/content_add_category.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_baseline_favorite_border_24.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/baseline_favorite_border_24.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_person_24.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_person_24.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_activity_otp_validation.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_otp_validation.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_activity_register.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_register.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_delete_24.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_delete_24.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/menu_menu_bottom_nav.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/menu/menu_bottom_nav.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_chevron_right_24.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_chevron_right_24.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/navigation_nav_graph.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_question.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_question.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_person.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_person.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_baseline_favorite_24.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/baseline_favorite_24.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_activity_login.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_filter.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_filter.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_bg_circle_white.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/bg_circle_white.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_add_24.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_add_24.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_activity_user.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_user.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_fragment_second.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/fragment_second.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_item_question_card.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/item_question_card.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_img_mth_thumb.jpg.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/img_mth_thumb.jpg"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_arrow_back_24.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_arrow_back_24.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_activity_category.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_category.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/xml_backup_rules.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_img_bio_thumb.jpg.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/img_bio_thumb.jpg"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_baseline_search_24.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/baseline_search_24.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_item_user_card.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/item_user_card.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_img_fiz_thumb.jpg.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/img_fiz_thumb.jpg"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_activity_lesson.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_lesson.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_activity_add_category.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_add_category.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_person_remove_24.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_person_remove_24.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_img_ch_thumb.jpg.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/img_ch_thumb.jpg"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_feedback_24.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_feedback_24.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_activity_forgot_password.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_forgot_password.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_rounded_img.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/rounded_img.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_activity_admin_home.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_admin_home.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_lock_24.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_lock_24.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_logout_24.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_logout_24.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_baseline_home_24.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/baseline_home_24.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_exam.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_exam.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_visibility_24.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_visibility_24.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_archive_24.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_archive_24.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_logo_dark.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/logo_dark.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_bg_search.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/bg_search.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_item_exam_card.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/item_exam_card.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/xml_file_paths.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/xml/file_paths.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_activity_feedback.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_feedback.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_edit_24.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_edit_24.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_star_filled.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_star_filled.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_activity_profile.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_profile.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_activity_splash.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_fragment_first.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/fragment_first.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_ic_category.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/ic_category.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/layout_activity_home.xml.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_home.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-debug-50:/drawable_img_art_thumb.png.flat",
+        "source": "com.melihberat.mobiluyg.app-main-52:/drawable/img_art_thumb.png"
+    }
+]

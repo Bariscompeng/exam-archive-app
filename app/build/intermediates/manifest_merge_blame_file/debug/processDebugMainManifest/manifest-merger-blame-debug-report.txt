@@ -1,0 +1,261 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.melihberat.mobiluyg"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="35" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:6:5-66
+11-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:6:22-64
+12
+13    <permission
+13-->[androidx.core:core:1.13.1] /home/baris/.gradle/caches/8.13/transforms/ce4a7efb23ea96dca3f516a2b061ba96/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+14        android:name="com.melihberat.mobiluyg.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+14-->[androidx.core:core:1.13.1] /home/baris/.gradle/caches/8.13/transforms/ce4a7efb23ea96dca3f516a2b061ba96/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+15        android:protectionLevel="signature" />
+15-->[androidx.core:core:1.13.1] /home/baris/.gradle/caches/8.13/transforms/ce4a7efb23ea96dca3f516a2b061ba96/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+16
+17    <uses-permission android:name="com.melihberat.mobiluyg.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+17-->[androidx.core:core:1.13.1] /home/baris/.gradle/caches/8.13/transforms/ce4a7efb23ea96dca3f516a2b061ba96/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.13.1] /home/baris/.gradle/caches/8.13/transforms/ce4a7efb23ea96dca3f516a2b061ba96/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+18
+19    <application
+19-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:9:5-87:19
+20        android:allowBackup="true"
+20-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:10:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.13.1] /home/baris/.gradle/caches/8.13/transforms/ce4a7efb23ea96dca3f516a2b061ba96/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+22        android:dataExtractionRules="@xml/data_extraction_rules"
+22-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:12:9-65
+23        android:debuggable="true"
+24        android:extractNativeLibs="false"
+25        android:fullBackupContent="@xml/backup_rules"
+25-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:13:9-54
+26        android:icon="@mipmap/ic_launcher"
+26-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:14:9-43
+27        android:label="@string/app_name"
+27-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:15:9-41
+28        android:roundIcon="@mipmap/ic_launcher_round"
+28-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:16:9-54
+29        android:supportsRtl="true"
+29-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:17:9-35
+30        android:theme="@style/Theme.Mobiluyg"
+30-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:18:9-46
+31        android:usesCleartextTraffic="true" >
+31-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:11:9-44
+32        <activity
+32-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:20:9-23:53
+33            android:name="com.melihberat.mobiluyg.AddCategoryActivity"
+33-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:21:13-48
+34            android:exported="false"
+34-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:22:13-37
+35            android:theme="@style/Theme.Mobiluyg" />
+35-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:23:13-50
+36        <activity
+36-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:24:9-26:40
+37            android:name="com.melihberat.mobiluyg.OtpValidationActivity"
+37-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:25:13-50
+38            android:exported="false" />
+38-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:26:13-37
+39        <activity
+39-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:27:9-29:40
+40            android:name="com.melihberat.mobiluyg.ForgotPasswordActivity"
+40-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:28:13-51
+41            android:exported="false" />
+41-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:29:13-37
+42        <activity
+42-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:30:9-33:46
+43            android:name="com.melihberat.mobiluyg.LessonActivity"
+43-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:31:13-43
+44            android:exported="false"
+44-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:32:13-37
+45            android:launchMode="singleTop" />
+45-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:33:13-43
+46        <activity
+46-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:34:9-36:40
+47            android:name="com.melihberat.mobiluyg.FeedbackActivity"
+47-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:35:13-45
+48            android:exported="false" />
+48-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:36:13-37
+49        <activity
+49-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:37:9-39:40
+50            android:name="com.melihberat.mobiluyg.UserActivity"
+50-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:38:13-41
+51            android:exported="false" />
+51-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:39:13-37
+52        <activity
+52-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:40:9-42:40
+53            android:name="com.melihberat.mobiluyg.QuestionActivity"
+53-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:41:13-45
+54            android:exported="false" />
+54-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:42:13-37
+55        <activity
+55-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:43:9-45:40
+56            android:name="com.melihberat.mobiluyg.ExamActivity"
+56-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:44:13-41
+57            android:exported="false" />
+57-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:45:13-37
+58        <activity
+58-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:46:9-48:40
+59            android:name="com.melihberat.mobiluyg.AdminHomeActivity"
+59-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:47:13-46
+60            android:exported="false" />
+60-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:48:13-37
+61        <activity
+61-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:49:9-52:46
+62            android:name="com.melihberat.mobiluyg.CategoryActivity"
+62-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:50:13-45
+63            android:exported="false"
+63-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:51:13-37
+64            android:launchMode="singleTop" />
+64-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:52:13-43
+65        <activity
+65-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:53:9-55:40
+66            android:name="com.melihberat.mobiluyg.ProfileActivity"
+66-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:54:13-44
+67            android:exported="false" />
+67-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:55:13-37
+68        <activity
+68-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:56:9-58:40
+69            android:name="com.melihberat.mobiluyg.FavoritesActivity"
+69-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:57:13-46
+70            android:exported="false" />
+70-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:58:13-37
+71        <activity
+71-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:59:9-62:46
+72            android:name="com.melihberat.mobiluyg.HomeActivity"
+72-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:60:13-41
+73            android:exported="false"
+73-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:61:13-37
+74            android:launchMode="singleTop" />
+74-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:62:13-43
+75        <activity
+75-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:63:9-65:40
+76            android:name="com.melihberat.mobiluyg.RegisterActivity"
+76-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:64:13-45
+77            android:exported="false" />
+77-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:65:13-37
+78        <activity
+78-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:66:9-74:20
+79            android:name="com.melihberat.mobiluyg.SplashActivity"
+79-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:67:13-43
+80            android:exported="true" >
+80-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:68:13-36
+81            <intent-filter>
+81-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:69:13-73:29
+82                <action android:name="android.intent.action.MAIN" />
+82-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:70:17-69
+82-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:70:25-66
+83
+84                <category android:name="android.intent.category.LAUNCHER" />
+84-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:72:17-77
+84-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:72:27-74
+85            </intent-filter>
+86        </activity>
+87
+88        <provider
+89            android:name="androidx.core.content.FileProvider"
+89-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:77:13-62
+90            android:authorities="com.melihberat.mobiluyg.fileprovider"
+90-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:78:13-64
+91            android:exported="false"
+91-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:79:13-37
+92            android:grantUriPermissions="true" >
+92-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:80:13-47
+93            <meta-data
+93-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:81:13-83:54
+94                android:name="android.support.FILE_PROVIDER_PATHS"
+94-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:82:17-67
+95                android:resource="@xml/file_paths" />
+95-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:83:17-51
+96        </provider>
+97
+98        <activity android:name="com.melihberat.mobiluyg.LoginActivity" />
+98-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:86:9-51
+98-->/home/baris/Desktop/Mobil-app-main/app/src/main/AndroidManifest.xml:86:19-48
+99
+100        <provider
+100-->[androidx.emoji2:emoji2:1.3.0] /home/baris/.gradle/caches/8.13/transforms/f96b9c31cf6ce7fcc72e8edbc36c162a/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+101            android:name="androidx.startup.InitializationProvider"
+101-->[androidx.emoji2:emoji2:1.3.0] /home/baris/.gradle/caches/8.13/transforms/f96b9c31cf6ce7fcc72e8edbc36c162a/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+102            android:authorities="com.melihberat.mobiluyg.androidx-startup"
+102-->[androidx.emoji2:emoji2:1.3.0] /home/baris/.gradle/caches/8.13/transforms/f96b9c31cf6ce7fcc72e8edbc36c162a/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+103            android:exported="false" >
+103-->[androidx.emoji2:emoji2:1.3.0] /home/baris/.gradle/caches/8.13/transforms/f96b9c31cf6ce7fcc72e8edbc36c162a/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+104            <meta-data
+104-->[androidx.emoji2:emoji2:1.3.0] /home/baris/.gradle/caches/8.13/transforms/f96b9c31cf6ce7fcc72e8edbc36c162a/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+105                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+105-->[androidx.emoji2:emoji2:1.3.0] /home/baris/.gradle/caches/8.13/transforms/f96b9c31cf6ce7fcc72e8edbc36c162a/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+106                android:value="androidx.startup" />
+106-->[androidx.emoji2:emoji2:1.3.0] /home/baris/.gradle/caches/8.13/transforms/f96b9c31cf6ce7fcc72e8edbc36c162a/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+107            <meta-data
+107-->[androidx.lifecycle:lifecycle-process:2.8.6] /home/baris/.gradle/caches/8.13/transforms/da3fa32c2da49eea7e1e6e3ff3bfbcb2/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:29:13-31:52
+108                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+108-->[androidx.lifecycle:lifecycle-process:2.8.6] /home/baris/.gradle/caches/8.13/transforms/da3fa32c2da49eea7e1e6e3ff3bfbcb2/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:30:17-78
+109                android:value="androidx.startup" />
+109-->[androidx.lifecycle:lifecycle-process:2.8.6] /home/baris/.gradle/caches/8.13/transforms/da3fa32c2da49eea7e1e6e3ff3bfbcb2/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:31:17-49
+110            <meta-data
+110-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+111                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+111-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+112                android:value="androidx.startup" />
+112-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+113        </provider>
+114
+115        <uses-library
+115-->[androidx.window:window:1.0.0] /home/baris/.gradle/caches/8.13/transforms/d2a388d0771189b5c62c42b42caf2cf6/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+116            android:name="androidx.window.extensions"
+116-->[androidx.window:window:1.0.0] /home/baris/.gradle/caches/8.13/transforms/d2a388d0771189b5c62c42b42caf2cf6/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+117            android:required="false" />
+117-->[androidx.window:window:1.0.0] /home/baris/.gradle/caches/8.13/transforms/d2a388d0771189b5c62c42b42caf2cf6/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+118        <uses-library
+118-->[androidx.window:window:1.0.0] /home/baris/.gradle/caches/8.13/transforms/d2a388d0771189b5c62c42b42caf2cf6/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+119            android:name="androidx.window.sidecar"
+119-->[androidx.window:window:1.0.0] /home/baris/.gradle/caches/8.13/transforms/d2a388d0771189b5c62c42b42caf2cf6/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+120            android:required="false" />
+120-->[androidx.window:window:1.0.0] /home/baris/.gradle/caches/8.13/transforms/d2a388d0771189b5c62c42b42caf2cf6/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+121
+122        <receiver
+122-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+123            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+123-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+124            android:directBootAware="false"
+124-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+125            android:enabled="true"
+125-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+126            android:exported="true"
+126-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+127            android:permission="android.permission.DUMP" >
+127-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+128            <intent-filter>
+128-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+129                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+129-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+129-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+130            </intent-filter>
+131            <intent-filter>
+131-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+132                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+132-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+132-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+133            </intent-filter>
+134            <intent-filter>
+134-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+135                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+135-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+135-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+136            </intent-filter>
+137            <intent-filter>
+137-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+138                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+138-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+138-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/baris/.gradle/caches/8.13/transforms/142286c98d094308c72123271b68f1c1/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+139            </intent-filter>
+140        </receiver>
+141    </application>
+142
+143</manifest>

@@ -1,0 +1,94 @@
+[
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/fragment_second.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/fragment_second.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/activity_admin_home.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_admin_home.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/activity_home.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_home.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/content_add_category.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/content_add_category.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/item_feedback_card.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/item_feedback_card.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/activity_forgot_password.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_forgot_password.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/activity_question.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_question.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/activity_category.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_category.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/activity_exam.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_exam.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/activity_login.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/activity_add_category.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_add_category.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/activity_otp_validation.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_otp_validation.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/activity_lesson.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_lesson.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/item_question_card.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/item_question_card.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/activity_splash.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/item_user_card.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/item_user_card.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/activity_user.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_user.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/fragment_first.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/fragment_first.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/item_exam_card.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/item_exam_card.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/activity_favorites.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_favorites.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/activity_feedback.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_feedback.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/activity_register.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_register.xml"
+    },
+    {
+        "merged": "com.melihberat.mobiluyg.app-mergeDebugResources-49:/layout/activity_profile.xml",
+        "source": "com.melihberat.mobiluyg.app-main-52:/layout/activity_profile.xml"
+    }
+]
