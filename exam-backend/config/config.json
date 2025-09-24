@@ -5,7 +5,10 @@
     "database": "exam_app_db",
     "host": "127.0.0.1",
     "dialect": "postgres"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
   },
   "test": {
     "username": "root",
