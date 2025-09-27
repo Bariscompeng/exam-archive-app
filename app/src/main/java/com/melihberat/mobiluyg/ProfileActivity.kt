@@ -19,6 +19,14 @@ import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Locale
 
+
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
+import retrofit2.HttpException
+import com.melihberat.mobiluyg.Network.ApiClient
+import com.melihberat.mobiluyg.Network.TokenStore
+
+
 class ProfileActivity : AppCompatActivity() {
 
     companion object {
@@ -170,27 +178,52 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     private fun performAccountDeletion() {
+    // UI'de kullanıcıya bekleme durumu göstermek istiyorsanız burada gösterebilirsiniz
+    lifecycleScope.launch {
+        try {
+            // 1) Sunucudan sil
+            val api = ApiClient.api(this@ProfileActivity)
+            val resp = api.deleteMe()  // ApiMessage { message: "Account deleted" }
 
-        val deleted = deleteAccountFromDatabase(currentUser)
+            // 2) Token ve yerel bilgileri temizle (token clear suspend olduğu için coroutine içindeyiz)
+            TokenStore.clearToken(this@ProfileActivity)
+            prefs.edit()
+                .putBoolean(KEY_REMEMBER, false)
+                .remove(LoginActivity.EXTRA_USERNAME)
+                .remove(LoginActivity.EXTRA_ROLE)
+                .remove(AVATAR_PREF_PREFIX + currentUser)
+                .apply()
 
-        if (!deleted) {
-            Toast.makeText(this, "Hesap silinemedi. Lütfen tekrar dene.", Toast.LENGTH_SHORT).show()
-            return
+            Toast.makeText(
+                this@ProfileActivity,
+                resp.message.ifBlank { "Hesap silindi" },
+                Toast.LENGTH_SHORT
+            ).show()
+
+            // 3) Login'e dön
+            val i = Intent(this@ProfileActivity, LoginActivity::class.java).apply {
+                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            }
+            startActivity(i)
+            finish()
+
+        } catch (e: HttpException) {
+            val msg = when (e.code()) {
+                401 -> "Oturum geçersiz. Lütfen yeniden giriş yapın."
+                404 -> "Kullanıcı bulunamadı."
+                else -> "Silme başarısız (HTTP ${e.code()})"
+            }
+            Toast.makeText(this@ProfileActivity, msg, Toast.LENGTH_LONG).show()
+        } catch (e: Exception) {
+            Toast.makeText(
+                this@ProfileActivity,
+                "Ağ/istemci hatası: ${e.localizedMessage}",
+                Toast.LENGTH_LONG
+            ).show()
         }
-
-        prefs.edit()
-            .putBoolean(KEY_REMEMBER, false)
-            .remove(LoginActivity.EXTRA_USERNAME)
-            .remove(LoginActivity.EXTRA_ROLE)
-            .remove(AVATAR_PREF_PREFIX + currentUser)
-            .apply()
-
-        val i = Intent(this, LoginActivity::class.java).apply {
-            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-        }
-        startActivity(i)
-        finish()
     }
+}
+
 
 
     private fun deleteAccountFromDatabase(username: String): Boolean {

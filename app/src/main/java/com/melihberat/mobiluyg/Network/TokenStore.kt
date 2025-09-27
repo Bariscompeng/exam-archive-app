@@ -1,36 +1,45 @@
 package com.melihberat.mobiluyg.Network
 
 import android.content.Context
-import androidx.datastore.preferences.core.edit
-import androidx.datastore.preferences.core.stringPreferencesKey
-import androidx.datastore.preferences.preferencesDataStore
-import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.map
 
-private const val DATASTORE_NAME = "auth_prefs"
-
-// Context.dataStore uzantısı
-private val Context.dataStore by preferencesDataStore(DATASTORE_NAME)
-
+/**
+ * Basit SharedPreferences tabanlı token saklama.
+ */
 object TokenStore {
-    private val KEY_TOKEN = stringPreferencesKey("auth_token")
+    private const val PREFS = "auth_prefs"
+    private const val KEY_TOKEN = "auth_token"
 
-    suspend fun setToken(context: Context, token: String) {
-        context.dataStore.edit { prefs ->
-            prefs[KEY_TOKEN] = token
-        }
+    // Async sürümler (isteğe bağlı)
+    suspend fun saveToken(context: Context, token: String) {
+        context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+            .edit()
+            .putString(KEY_TOKEN, token)
+            .apply()
     }
 
     suspend fun getToken(context: Context): String? {
-        return context.dataStore.data
-            .map { prefs -> prefs[KEY_TOKEN] }
-            .first()
+        return context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+            .getString(KEY_TOKEN, null)
     }
 
     suspend fun clearToken(context: Context) {
-        context.dataStore.edit { prefs ->
-            prefs.remove(KEY_TOKEN)
-        }
+        context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+            .edit()
+            .remove(KEY_TOKEN)
+            .apply()
+    }
+
+    // Senkron yardımcılar (Login/Register içinde bunları kullandık)
+    fun saveTokenSync(context: Context, token: String) {
+        context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+            .edit()
+            .putString(KEY_TOKEN, token)
+            .apply()
+    }
+
+    fun getTokenSync(context: Context): String? {
+        return context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+            .getString(KEY_TOKEN, null)
     }
 }
 

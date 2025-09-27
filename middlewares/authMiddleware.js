@@ -1,24 +1,17 @@
+// middleware/auth.js
 const jwt = require("jsonwebtoken");
-require("dotenv").config();
 
-exports.authMiddleware = (req, res, next) => {
-  const authHeader = req.headers.authorization;
-  if (!authHeader) return res.status(401).json({ error: "Token gerekli" });
+module.exports = function auth(req, res, next) {
+  const header = req.headers.authorization || "";
+  const token = header.startsWith("Bearer ") ? header.slice(7) : null;
+  if (!token) return res.status(401).json({ message: "Token gerekli" });
 
-  const token = authHeader.split(" ")[1];
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.user = decoded;
+    const payload = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = payload; // { id, email }
     next();
-  } catch {
-    return res.status(401).json({ error: "Geçersiz token" });
+  } catch (e) {
+    return res.status(401).json({ message: "Geçersiz veya süresi dolmuş token" });
   }
-};
-
-exports.adminOnly = (req, res, next) => {
-  if (req.user.role !== "admin") {
-    return res.status(403).json({ error: "Yalnızca admin erişebilir." });
-  }
-  next();
 };
 

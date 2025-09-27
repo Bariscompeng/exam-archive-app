@@ -16,40 +16,30 @@ import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.card.MaterialCardView
 
-<<<<<<< HEAD
 import androidx.lifecycle.lifecycleScope
 import com.melihberat.mobiluyg.Network.ApiClient
 import com.melihberat.mobiluyg.Network.ApiResult
 import com.melihberat.mobiluyg.Network.safeCall
 import kotlinx.coroutines.launch
 
-=======
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
 class FavoritesActivity : AppCompatActivity() {
 
     companion object {
         private const val EXTRA_PREV = "EXTRA_PREV"
-<<<<<<< HEAD
 
         // Diğer ekranlardan hızlı ekleme için
-=======
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
         const val EXTRA_ADD_FAV = "EXTRA_ADD_FAV"
         const val EXTRA_FAV_LESSON = "EXTRA_FAV_LESSON"
         const val EXTRA_FAV_TITLE = "EXTRA_FAV_TITLE"
         const val EXTRA_FAV_DESC = "EXTRA_FAV_DESC"
-<<<<<<< HEAD
 
         // (İstersen local cache için bırakabiliriz; ama backend’e geçiyoruz)
-=======
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
         private const val PREF_NAME = "favs"
         private const val PREF_DYNAMIC_SET = "dynamic_entries"
     }
 
     private lateinit var bottom: BottomNavigationView
 
-<<<<<<< HEAD
     // --- (Opsiyonel) local cache yardımcıları ---
     private fun prefs() = getSharedPreferences(PREF_NAME, MODE_PRIVATE)
     private fun getStringSet(key: String): MutableSet<String> =
@@ -59,50 +49,25 @@ class FavoritesActivity : AppCompatActivity() {
     }
     private fun makeDynamicEntry(lesson: String, title: String, desc: String) =
         "$lesson|$title|$desc"
-=======
-    private fun prefs() = getSharedPreferences(PREF_NAME, MODE_PRIVATE)
-
-    private fun getStringSet(key: String): MutableSet<String> =
-        (prefs().getStringSet(key, emptySet())?.toMutableSet()) ?: mutableSetOf()
-
-    private fun saveStringSet(key: String, set: MutableSet<String>) {
-        prefs().edit().putStringSet(key, HashSet(set)).apply()
-    }
-
-    private fun makeDynamicEntry(lesson: String, title: String, desc: String) =
-        "$lesson|$title|$desc"
-
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
     private fun addDynamic(lesson: String, title: String, desc: String) {
         val set = getStringSet(PREF_DYNAMIC_SET)
         set.removeAll { it.startsWith("$lesson|$title|") }
         set.add(makeDynamicEntry(lesson, title, desc))
         saveStringSet(PREF_DYNAMIC_SET, set)
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
     private fun removeDynamic(lesson: String, title: String) {
         val set = getStringSet(PREF_DYNAMIC_SET)
         set.removeAll { it.startsWith("$lesson|$title|") }
         saveStringSet(PREF_DYNAMIC_SET, set)
     }
-<<<<<<< HEAD
     // -------------------------------------------
-=======
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_favorites)
 
-<<<<<<< HEAD
         findViewById<MaterialToolbar>(R.id.topAppBar)
             .setNavigationOnClickListener { onBackPressed() }
-=======
-        findViewById<MaterialToolbar>(R.id.topAppBar).setNavigationOnClickListener { onBackPressed() }
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
 
         bottom = findViewById(R.id.bottomNav)
         bottom.setOnItemSelectedListener { item ->
@@ -126,35 +91,23 @@ class FavoritesActivity : AppCompatActivity() {
         }
         bottom.menu.findItem(R.id.nav_fav).isChecked = true
 
-<<<<<<< HEAD
         // Başka ekrandan hızlı ekleme geldiyse önce onu göster
-=======
-        // Eğer başka yerden "hemen ekle" intent'i ile gelirse
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
         if (intent.getBooleanExtra(EXTRA_ADD_FAV, false)) {
             val lesson = intent.getStringExtra(EXTRA_FAV_LESSON).orEmpty()
             val itemTitle = intent.getStringExtra(EXTRA_FAV_TITLE).orEmpty()
             val itemDesc = intent.getStringExtra(EXTRA_FAV_DESC).orEmpty()
             addFavoriteCard(lesson, itemTitle, itemDesc)
-<<<<<<< HEAD
             // (Opsiyonel) local’e de yaz
             addDynamic(lesson, itemTitle, itemDesc)
         }
 
         // İlk yüklemede backend + (opsiyonel) local cache’i ekrana bas
         rebuildFavoritesFromBackendAndLocal()
-=======
-            addDynamic(lesson, itemTitle, itemDesc)
-        }
-
-        rebuildDynamicFromStore()
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
     }
 
     override fun onResume() {
         super.onResume()
         bottom.menu.findItem(R.id.nav_fav).isChecked = true
-<<<<<<< HEAD
         rebuildFavoritesFromBackendAndLocal()
     }
 
@@ -195,12 +148,6 @@ class FavoritesActivity : AppCompatActivity() {
                 }
             }
         }
-=======
-        // Görünümü her girişte depodan tazele
-        val container = getFavContainer() ?: return
-        container.removeAllViews()
-        rebuildDynamicFromStore()
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
     }
 
     private fun addFavoriteCard(lesson: String, itemTitle: String, itemDesc: String) {
@@ -249,15 +196,10 @@ class FavoritesActivity : AppCompatActivity() {
                 topMargin = dp(2f).toInt()
             }
             setOnClickListener {
-<<<<<<< HEAD
                 // Şimdilik sadece ekrandan ve local cache’ten kaldırıyoruz.
                 // Backend’e “favori sil” koyarsan burada API çağrısı da yapabilirsin.
                 (card.parent as? ViewGroup)?.removeView(card)
                 removeDynamic(lesson, itemTitle)
-=======
-                (card.parent as? ViewGroup)?.removeView(card)
-                removeDynamic(lesson, itemTitle) // Yıldıza basınca kaybolsun
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
             }
         }
 
@@ -295,23 +237,6 @@ class FavoritesActivity : AppCompatActivity() {
         container.addView(card)
     }
 
-<<<<<<< HEAD
-=======
-    private fun rebuildDynamicFromStore() {
-        val container = getFavContainer() ?: return
-        val set = getStringSet(PREF_DYNAMIC_SET)
-        for (entry in set) {
-            val parts = entry.split("|", limit = 3)
-            if (parts.size == 3) {
-                val (lesson, title, desc) = parts
-                if (!containerHasCard(container, "$lesson|$title")) {
-                    addFavoriteCard(lesson, title, desc)
-                }
-            }
-        }
-    }
-
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
     private fun getFavContainer(): LinearLayout? {
         val scroll = findViewById<NestedScrollView>(R.id.favScroll) ?: return null
         return scroll.findViewById(R.id.favContainer)

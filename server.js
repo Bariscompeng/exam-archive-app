@@ -1,16 +1,11 @@
-<<<<<<< HEAD
 // server.js
 const express = require("express");
 const cors = require("cors");
-=======
-const express = require("express");
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
 const app = express();
 require("dotenv").config();
 
 const db = require("./models");
 
-<<<<<<< HEAD
 // Var olan router'lar
 const publicRoutes = require("./routes/publicRoutes");
 const userRoutes = require("./routes/userRoutes");
@@ -40,18 +35,3 @@ db.sequelize.sync().then(() => {
   });
 });
 
-=======
-const publicRoutes = require("./routes/publicRoutes");
-const userRoutes = require("./routes/userRoutes");
-
-app.use(express.json());
-
-app.use("/api", publicRoutes);
-app.use("/api", userRoutes);
-
-db.sequelize.sync().then(() => {
-  app.listen(3000, () => {
-    console.log("✅ Sunucu 3000 portunda çalışıyor");
-  });
-});
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c

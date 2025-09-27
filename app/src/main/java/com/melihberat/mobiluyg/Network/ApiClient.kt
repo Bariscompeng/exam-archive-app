@@ -9,7 +9,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
-    private const val BASE_URL = "http://10.0.2.2:5000/"
+    // Emülatörden Node backend'e
+    private const val BASE_URL = "http://10.0.2.2:5000/api/"
 
     private fun authInterceptor(context: Context) = Interceptor { chain ->
         val original: Request = chain.request()

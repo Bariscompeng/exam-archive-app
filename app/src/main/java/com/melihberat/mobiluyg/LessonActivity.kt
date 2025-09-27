@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.card.MaterialCardView
-<<<<<<< HEAD
 import java.util.Locale
 
 import androidx.lifecycle.lifecycleScope
@@ -25,15 +24,6 @@ class LessonActivity : AppCompatActivity() {
     companion object {
         const val EXTRA_LESSON       = "EXTRA_LESSON"        // başlık
         const val EXTRA_LESSON_ID    = "EXTRA_LESSON_ID"     // Int id (varsa)
-=======
-import org.json.JSONArray
-import java.util.Locale
-
-class LessonActivity : AppCompatActivity() {
-
-    companion object {
-        const val EXTRA_LESSON = "EXTRA_LESSON"
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
 
         private const val PREF_NAME        = "favs"
         private const val PREF_DYNAMIC_SET = "dynamic_entries"
@@ -44,13 +34,9 @@ class LessonActivity : AppCompatActivity() {
 
     private lateinit var toolbar: MaterialToolbar
     private lateinit var dynamicList: LinearLayout
-<<<<<<< HEAD
 
     private var lessonTitle: String = ""
     private var lessonId: Int? = null   // <-- id’yi ayrı tut
-=======
-    private var lessonTitle: String = ""
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
 
     private fun prefs() = getSharedPreferences(PREF_NAME, MODE_PRIVATE)
 
@@ -87,15 +73,11 @@ class LessonActivity : AppCompatActivity() {
         setContentView(R.layout.activity_lesson)
 
         toolbar = findViewById(R.id.topAppBar)
-<<<<<<< HEAD
 
         // Başlık + (varsa) id’yi al
         lessonTitle = intent.getStringExtra(EXTRA_LESSON) ?: ""
         lessonId = intent.getIntExtra(EXTRA_LESSON_ID, -1).takeIf { it > 0 }
 
-=======
-        lessonTitle = intent.getStringExtra(EXTRA_LESSON) ?: ""
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
         if (lessonTitle.isNotBlank()) toolbar.title = lessonTitle
         toolbar.setNavigationOnClickListener { onBackPressedDispatcher.onBackPressed() }
 
@@ -104,21 +86,21 @@ class LessonActivity : AppCompatActivity() {
         bottom.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
-                    if (this !is HomeActivity) {
+                    if (javaClass != HomeActivity::class.java) {
                         startActivity(Intent(this, HomeActivity::class.java))
                         finish()
                     }
                     true
                 }
                 R.id.nav_fav -> {
-                    if (this !is FavoritesActivity) {
+                    if (javaClass != HomeActivity::class.java) {
                         startActivity(Intent(this, FavoritesActivity::class.java))
                         finish()
                     }
                     true
                 }
                 R.id.nav_profile -> {
-                    if (this !is ProfileActivity) {
+                    if (javaClass != HomeActivity::class.java) {
                         startActivity(Intent(this, ProfileActivity::class.java))
                         finish()
                     }
@@ -130,13 +112,8 @@ class LessonActivity : AppCompatActivity() {
 
         dynamicList = findViewById(R.id.examDynamicList)
 
-<<<<<<< HEAD
         // Listeyi yükle
         loadDynamicExams()
-=======
-        val titleForToolbar = if (lessonTitle.isNotBlank()) lessonTitle else (toolbar.title?.toString() ?: "")
-        loadDynamicExamsForLesson(titleForToolbar)
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
     }
 
     override fun onResume() {
@@ -153,11 +130,7 @@ class LessonActivity : AppCompatActivity() {
     private fun refreshDynamicStars() {
         val lesson = (lessonTitle.takeIf { it.isNotBlank() } ?: toolbar.title?.toString().orEmpty()).trim()
         forEachDynamicStar { star, type, _ ->
-<<<<<<< HEAD
             setStarTint(star, isFav(lesson, type))
-=======
-            setStarTint(star, isFav(lesson, type)) // Kayıttaki duruma göre boya
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
         }
     }
 
@@ -168,7 +141,6 @@ class LessonActivity : AppCompatActivity() {
         )
     }
 
-<<<<<<< HEAD
     private fun loadDynamicExams() {
         dynamicList.removeAllViews()
 
@@ -209,29 +181,6 @@ class LessonActivity : AppCompatActivity() {
                 is ApiResult.Error -> {
                     // TODO: kullanıcıya uygun bir hata gösterimi ekle
                 }
-=======
-    private fun loadDynamicExamsForLesson(lesson: String) {
-        dynamicList.removeAllViews()
-        val prefs = getSharedPreferences(EXAM_PREFS, MODE_PRIVATE)
-        val jsonStr = prefs.getString(KEY_EXAMS, "[]")
-        val arr = JSONArray(jsonStr)
-
-        for (i in 0 until arr.length()) {
-            val obj = arr.getJSONObject(i)
-            val title  = obj.optString("title")    // ders adı
-            val type   = obj.optString("subtitle") // sınav türü
-            val topics = obj.optString("topics")   // içerik
-
-            if (sameTr(title, lesson)) {
-                val card = createLessonStyleExamCard(type, topics)
-                val star = card.findViewWithTag<ImageView>("star")
-                star?.let {
-                    // Artık favorileri silmiyoruz; mevcut duruma göre gösteriyoruz
-                    setStarTint(it, isFav(lesson, type))
-                    attachFavoriteToggle(it, lesson, type, topics)
-                }
-                dynamicList.addView(card)
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
             }
         }
     }
@@ -353,7 +302,4 @@ class LessonActivity : AppCompatActivity() {
 
     private fun sameTr(a: String, b: String): Boolean = foldTr(a) == foldTr(b)
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c

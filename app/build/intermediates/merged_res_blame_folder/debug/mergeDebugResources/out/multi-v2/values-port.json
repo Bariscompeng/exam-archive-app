@@ -4,7 +4,7 @@
             "outputFile": "com.melihberat.mobiluyg.app-mergeDebugResources-48:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "/home/baris/.gradle/caches/8.13/transforms/6a9c9bb90ea781e070b43d19fb8d7ef5/transformed/appcompat-1.7.0/res/values-port/values-port.xml",
+                    "source": "/home/baris/.gradle/caches/transforms-4/36b3856ba9c7cbbdc36c1fd5fe2a4d44/transformed/appcompat-1.7.0/res/values-port/values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

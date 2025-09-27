@@ -1,15 +1,29 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+# --- Android ---
+.gradle/
+.local/
+**/build/
+captures/
+.externalNativeBuild/
+.cxx/
 local.properties
+*.keystore
+*.jks
+*.apk
+.idea/
+*.iml
+
+# --- Node/Backend ---
+node_modules/
+npm-debug.log*
+# package-lock.json'ı TAKİP ET (silme)!
+
+# --- Veritabanı / gizli ---
+.env
+.env.*
+*.sqlite
+*.db
+data/
+
+# --- OS ---
+.DS_Store
+Thumbs.db

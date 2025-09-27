@@ -7,12 +7,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.appbar.MaterialToolbar
-<<<<<<< HEAD
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
 import com.melihberat.mobiluyg.Network.ApiClient  // DİKKAT: Network (büyük N)
-=======
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
 
 class FeedbackActivity : AppCompatActivity() {
 
@@ -20,15 +17,10 @@ class FeedbackActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feedback)
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
         findViewById<MaterialToolbar?>(R.id.topAppBar)?.setNavigationOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
 
-<<<<<<< HEAD
         // Backend'den feedbackleri çekip e-posta listesine dönüştür
         lifecycleScope.launch {
             try {
@@ -46,19 +38,6 @@ class FeedbackActivity : AppCompatActivity() {
     }
 
     // Kartlardaki e-posta, görüntüle/arsivle/sil tıklamaları
-=======
-        val emails = listOf(
-            "melihberat00@gmail.com",
-            "ayse@example.com",
-            "ali@example.com",
-            "zehra@example.com",
-            "can@example.com"
-        )
-
-        bindEmails(emails)
-    }
-
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
     private fun bindEmails(emails: List<String>) {
         val container = findViewById<ViewGroup?>(R.id.feedbackContainer) ?: return
         var idx = 0
@@ -72,16 +51,11 @@ class FeedbackActivity : AppCompatActivity() {
 
             cardRoot.findViewById<View?>(R.id.ivView)?.setOnClickListener {
                 Toast.makeText(this, "Görüntüle: $email", Toast.LENGTH_SHORT).show()
-<<<<<<< HEAD
                 // İstersen burada detay ekranı açabilirsin
-=======
-                // TODO: Detay ekranı açmak istersen burada Intent başlat
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
             }
 
             cardRoot.findViewById<View?>(R.id.ivArchive)?.setOnClickListener {
                 Toast.makeText(this, "Arşivlendi: $email", Toast.LENGTH_SHORT).show()
-<<<<<<< HEAD
                 // Backend'e arşiv isteği göndermek istersen burada yap
             }
 
@@ -90,20 +64,8 @@ class FeedbackActivity : AppCompatActivity() {
                 container.removeView(cardRoot)
                 Toast.makeText(this, "Silindi: $email", Toast.LENGTH_SHORT).show()
                 // Backend'e silme isteği göndermek istersen burada yap
-=======
-                // TODO: Arşivleme mantığını burada uygula
-            }
-
-            cardRoot.findViewById<View?>(R.id.ivDelete)?.setOnClickListener {
-
-                container.removeView(cardRoot)
-                Toast.makeText(this, "Silindi: $email", Toast.LENGTH_SHORT).show()
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c
             }
         }
     }
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 2061cb4c3c9637577fdb11e615072fd06abcf53c

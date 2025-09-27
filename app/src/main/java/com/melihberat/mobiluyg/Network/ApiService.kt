@@ -1,52 +1,70 @@
 package com.melihberat.mobiluyg.Network
 
-import com.melihberat.mobiluyg.Network.model.*
-import retrofit2.http.*
+import retrofit2.http.Body
+import retrofit2.http.DELETE
+import retrofit2.http.GET
+import retrofit2.http.POST
+import retrofit2.http.Path
+import retrofit2.http.Query
+
+// Model sınıfları
+import com.melihberat.mobiluyg.Network.model.LoginRequest
+import com.melihberat.mobiluyg.Network.model.RegisterRequest
+import com.melihberat.mobiluyg.Network.model.AuthResponse
+import com.melihberat.mobiluyg.Network.model.UserDto
+import com.melihberat.mobiluyg.Network.model.SchoolDto
+import com.melihberat.mobiluyg.Network.model.DepartmentDto
+import com.melihberat.mobiluyg.Network.model.LessonDto
+import com.melihberat.mobiluyg.Network.model.QuestionDto
+import com.melihberat.mobiluyg.Network.model.FavoriteDto
+import com.melihberat.mobiluyg.Network.model.ApiMessage
+import com.melihberat.mobiluyg.Network.model.FeedbackRequest
+import com.melihberat.mobiluyg.Network.model.FeedbackItem
 
 interface ApiService {
-
     // ---------- Auth ----------
-    @POST("/api/auth/login")
+    @POST("auth/login")
     suspend fun login(@Body body: LoginRequest): AuthResponse
 
-    @POST("/api/auth/register")
+    @POST("auth/register")
     suspend fun register(@Body body: RegisterRequest): AuthResponse
 
-    @GET("/api/auth/me")
+    @GET("auth/me")
     suspend fun me(): UserDto
 
-    // ---------- Public: Schools / Departments / Courses ----------
-    @GET("/api/schools")
+    // ---------- Public ----------
+    @GET("schools")
     suspend fun getSchools(): List<SchoolDto>
 
-    @GET("/api/schools/{id}/departments")
+    @GET("schools/{id}/departments")
     suspend fun getDepartmentsBySchool(@Path("id") schoolId: Int): List<DepartmentDto>
 
-    // Backend burada "courses" döndürüyor; biz bunları app tarafında LessonDto olarak kullanıyoruz
-    @GET("/api/departments/{id}/courses")
+    @GET("departments/{id}/courses")
     suspend fun getCoursesByDepartment(@Path("id") departmentId: Int): List<LessonDto>
 
     // ---------- Questions ----------
-    // Not: Şu an LessonActivity getQuestions(lessonId=lessonTitle) çağırıyor.
-    // Backend'te query ismi farklıysa ileride uyarlayabiliriz.
-    @GET("/api/questions")
+    @GET("questions")
     suspend fun getQuestions(@Query("lessonId") lessonId: String): List<QuestionDto>
 
-    // ---------- Favorites (backend’de varsa kullanılır) ----------
-    @GET("/api/favorites")
+    // ---------- Favorites ----------
+    @GET("favorites")
     suspend fun getFavorites(): List<FavoriteDto>
 
-    @POST("/api/favorites")
+    @POST("favorites")
     suspend fun addFavorite(@Body body: Map<String, String>): ApiMessage
 
-    @DELETE("/api/favorites/{id}")
+    @DELETE("favorites/{id}")
     suspend fun removeFavorite(@Path("id") id: String): ApiMessage
 
     // ---------- Feedback ----------
-    @POST("/api/feedback")
+    @POST("feedback")
     suspend fun sendFeedback(@Body body: FeedbackRequest): ApiMessage
 
-    @GET("/api/feedbacks")
+    @GET("feedbacks")
     suspend fun getFeedbacks(): List<FeedbackItem>
+
+    // ---------- Account ----------
+    @DELETE("users/me")
+    suspend fun deleteMe(): ApiMessage
 }
 
