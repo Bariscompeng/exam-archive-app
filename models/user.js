@@ -6,19 +6,52 @@ module.exports = (sequelize) => {
   const User = sequelize.define(
     'User',
     {
-      id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-      name: { type: DataTypes.STRING, allowNull: false },
+      // DB: id BIGINT (serial)
+      id: {
+        type: DataTypes.BIGINT,
+        primaryKey: true,
+        autoIncrement: true,
+        field: 'id',
+      },
+      // DB: name TEXT
+      name: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        field: 'name',
+      },
+      // DB: email TEXT (unique)
       email: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
         unique: true,
         validate: { isEmail: true },
+        field: 'email',
       },
-      passwordHash: { type: DataTypes.STRING, allowNull: false },
+      // KOD: passwordHash  <->  DB: passwordhash
+      passwordHash: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        field: 'passwordhash',
+      },
+      // KOD: role  <->  DB: role
+      role: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        defaultValue: 'user',
+        validate: { isIn: [['user', 'admin']] },
+        field: 'role',
+      },
     },
-    { tableName: 'users' }
+    {
+      tableName: 'users',
+      // DB'de küçük harf timestamp kolonları var
+      timestamps: true,
+      createdAt: 'createdat',
+      updatedAt: 'updatedat',
+    }
   );
 
+  // Şifre doğrulama yardımcı metod
   User.prototype.verifyPassword = function (password) {
     return bcrypt.compare(password, this.passwordHash);
   };

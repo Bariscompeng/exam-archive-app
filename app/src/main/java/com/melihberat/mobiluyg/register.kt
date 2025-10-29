@@ -62,11 +62,15 @@ class RegisterActivity : AppCompatActivity() {
                 val api = ApiClient.api(this@RegisterActivity)
                 val resp = api.register(RegisterRequest(name, email, password))
 
-                // Token kaydet (sync kullanıyoruz ki isim birliği olsun)
+                // Token kaydet (backend akışı bozulmasın)
                 TokenStore.saveTokenSync(this@RegisterActivity, resp.token)
 
-                Toast.makeText(this@RegisterActivity, "Kayıt başarılı", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this@RegisterActivity, HomeActivity::class.java))
+                Toast.makeText(this@RegisterActivity, "Kayıt başarılı! Lütfen giriş yapın.", Toast.LENGTH_SHORT).show()
+
+                // ✅ Kayıt sonrası LoginActivity’e yönlendirme
+                val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+                intent.putExtra("email", email) // istersen email alanını otomatik doldurmak için
+                startActivity(intent)
                 finish()
 
             } catch (e: HttpException) {

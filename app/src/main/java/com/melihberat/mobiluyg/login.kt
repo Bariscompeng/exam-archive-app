@@ -120,50 +120,62 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun attemptLogin() {
-        tilUsername.error = null
-        tilPassword.error = null
+    tilUsername.error = null
+    tilPassword.error = null
 
-        val u = etUsername.text?.toString()?.trim().orEmpty()
-        val p = etPassword.text?.toString()?.trim().orEmpty()
+    val u = etUsername.text?.toString()?.trim().orEmpty()
+    val p = etPassword.text?.toString()?.trim().orEmpty()
 
-        var ok = true
-        if (u.isEmpty()) { tilUsername.error = "Kullanıcı adı/email zorunlu"; ok = false }
-        if (p.isEmpty()) { tilPassword.error = "Şifre zorunlu"; ok = false }
-        if (!ok) return
+    var ok = true
+    if (u.isEmpty()) { tilUsername.error = "Kullanıcı adı/email zorunlu"; ok = false }
+    if (p.isEmpty()) { tilPassword.error = "Şifre zorunlu"; ok = false }
+    if (!ok) return
 
-        hideKeyboard(etPassword)
+    hideKeyboard(etPassword)
 
-        lifecycleScope.launch {
-            when (val res = safeCall { ApiClient.api(this@LoginActivity).login(LoginRequest(u, p)) }) {
-                is ApiResult.Success -> {
-                    // TOKEN'I KAYDET
-                    TokenStore.saveTokenSync(this@LoginActivity, res.data.token)
+    lifecycleScope.launch {
+        when (val res = safeCall { ApiClient.api(this@LoginActivity).login(LoginRequest(u, p)) }) {
+            is ApiResult.Success -> {
+                val user = res.data.user
+                val role = user.role ?: "user"
 
-                    // "Beni hatırla"
-                    val editor = getSharedPreferences(PREFS, MODE_PRIVATE).edit()
-                        .putBoolean(KEY_REMEMBER, cbRemember.isChecked)
-                    if (cbRemember.isChecked) {
-                        editor.putString(EXTRA_USERNAME, res.data.user.name)
-                        editor.putString(EXTRA_ROLE, "user")
-                    } else {
-                        editor.remove(EXTRA_USERNAME)
-                        editor.remove(EXTRA_ROLE)
-                    }
-                    editor.apply()
+                // TOKEN'I KAYDET (sync yardımcı)
+                TokenStore.saveTokenSync(this@LoginActivity, res.data.token)
 
-                    Toast.makeText(this@LoginActivity, "Hoş geldin ${res.data.user.name}", Toast.LENGTH_SHORT).show()
+                // "Beni hatırla"
+                val editor = getSharedPreferences(PREFS, MODE_PRIVATE).edit()
+                    .putBoolean(KEY_REMEMBER, cbRemember.isChecked)
+                if (cbRemember.isChecked) {
+                    editor.putString(EXTRA_USERNAME, user.name)
+                    editor.putString(EXTRA_ROLE, role)
+                } else {
+                    editor.remove(EXTRA_USERNAME)
+                    editor.remove(EXTRA_ROLE)
+                }
+                editor.apply()
+
+                Toast.makeText(this@LoginActivity, "Hoş geldin ${user.name}", Toast.LENGTH_SHORT).show()
+
+                if (role == "admin") {
+                    startActivity(Intent(this@LoginActivity, AdminHomeActivity::class.java).apply {
+                        putExtra(EXTRA_USERNAME, user.name)
+                        putExtra(EXTRA_ROLE, "admin")
+                    })
+                } else {
                     startActivity(Intent(this@LoginActivity, HomeActivity::class.java).apply {
-                        putExtra(EXTRA_USERNAME, res.data.user.name)
+                        putExtra(EXTRA_USERNAME, user.name)
                         putExtra(EXTRA_ROLE, "user")
                     })
-                    finish()
                 }
-                is ApiResult.Error -> {
-                    tilPassword.error = "Giriş başarısız: ${res.message}"
-                }
+                finish()
+            }
+            is ApiResult.Error -> {
+                // backend mesajını göster
+                tilPassword.error = "Giriş başarısız: ${res.message}"
             }
         }
     }
+}
 
     private fun View.showKeyboard() {
         requestFocus()
